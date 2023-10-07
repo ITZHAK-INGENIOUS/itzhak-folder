@@ -1,64 +1,356 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: boder-box;
-    font-family: 'Open Sans', sans-serif;
-    font-family: 'Poppins', sans-serif;
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Lato, Poppins, Sans-Serif;
 }
-.ecran{
-    width: 100%;
-    height: 100vh;
-    background-image: url('bkg.png');
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+html{
+  scroll-behavior: smooth;
 }
-img[alt="profile"]{
-    width: 150px;
-    height: 150px;
-    border-radius: 50px;
+body{
+  background: #F0F0F0;
+  color: #000;
+  margin: 2px;
 }
-.carte{
-    width: 90%;
-    max-width: 400px;
-    color: white;
-    text-align: center;
-    padding: 50px 30px;
-    border: 1px solid rgba(255,255,255,0.3);
-    background: rgba(255,255,255,0.2);
-    border-radius: 15px;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    backdrop-filter: blur(5px);
+.navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffff;
+  position: sticky;
+  top: 0;
+  margin: 2px;
+  width: 100%;
+  height: auto;
+  box-shadow: 2px 2px #0003;
+  border-radius: 7px;
+  padding: 2px;
 }
-.carte h2{
-    font-size: 50px;
-    font-weight: 600;
+.navbar .logo{
+  font-weight: 600;
+  display: flex;
+}
+.navbar .logo span{
+  color: #5080C0;
+}
+.navbar .logo a{
+  text-decoration: none;
+  color: #000;
+}
+.navbar ul{
+  display: flex;
+}
+.navbar ul li{
+  list-style: none;
+  margin-left: 10px;
+}
+.navbar ul li a{
+  color: #000f;
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+}
+.navbar ul li a:hover, .lien1.active, .lien2.active, .lien3.active{
+  color: #5080Cf;
+  background: #CCCDD738;
+  border-radius: 7px;
+  width: 100px;
+  text-align: center;
+  outline: none;
+  padding: 10px;
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  transition: .5s ease;
+}
+.navbar .bts{
+  display: flex;
+  margin-right: 2px;
+}
+.btn, button{
+  background: #5080C0;
+  outline: none;
+  text-align: center;
+  border: none;
+  box-shadow: 1px solid #0003;
+  border-radius: 5px;
+  width: 50px;
+  height: 30px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px #0003;
+  margin-left: 10px;
+}
+.bts a{
+  text-decoration: none;
+  color: #000;
+}
+.contact button{
+  margin: 10px;
+}
+.navbar .bts .chaine{
+  background: transparent;
+  color: #5080C0;
+}
+.Collections .cartes button{
+  background: transparent;
+  color: #5080C0;
+  margin: 10px;
+}
+.navbar .menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  user-select: none;
+}
+.navbar .menu h3{
+  transform: rotate(90deg);
+  padding: 10px;
+  text-align: center;
+  color: #5080C0;
+}
+/* ..Section-Acceuil.. */
+section{
+  width: 99%;
+  margin-left: 2px;
+  display: flex;
+}
+.acceuil .container{
+  display: flex;
+  flex-direction: column;
+}
+.acceuil .container .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  padding: 2px;
+  border-radius: 7px;
+  box-shadow: 2px #0003;
+}
+.acceuil .container .content .carte{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  width: 100%;
+}
+.acceuil .container .content .carte .image{
+  width: 50%;
+}
+.image img{
+  width: 200px;
+  border-radius: 7px;
+  height: auto;
+  box-shadow: 2px 2px 2px #0003;
+  
+}
+.acceuil .container .content .carte .text{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 7px;
+  padding: 2px;
+  box-shadow: 2px 2px 2px 2px #0003;
+  transition: 1s ease;
+  transform-origin: left;
+}
+.content .btn{
+  margin-top: 7px;
+  margin-bottom: 2px;
+}
+.acceuil .container .content .carte .text h4{
+  font-weight: 400;
+}
+.acceuil .container .content .carte .text span{
+  color: #5080C0;
+}
+.acceuil .container .skill{
+  background: #fff;
+  border-radius: 7px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px 2px #0003;
+}
+.acceuil .container .skill .cercles{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.acceuil .container .skill .cercle .image img{
+  width: 70px;
+  height: auto;
+}
+.skill .starts img{
+  width: 20px;
+  height: 20px;
+}
+
+/* ..Fin-Acceuil.. */
+
+/* ..Section-Collections.. */
+.Collections .container .cartes{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 7px;
+  margin: 2px;
+  padding: 2px;
+  justify-content: space-between;
+  align-items:  center;
+}
+.Collections .container .card{
+  display: flex;
+  margin-top: 20px;
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px 2px #0003;
+}
+.Collections .container .carte .image img{
+  width: 80px;
+  height: auto;
+}
+.Collections .container .cartes .carte {
+
+
+  background: #fff;
+  box-shadow: 2px 2px 2px #0003;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 10px;
+  justify-content: center;
+  box-shadow: 2px 2px 2px #0003;
+  height: auto;
+  border-radius: 7px;
+}
+.carte .text p, .texte p{
+  font-size: 10px;
+}
+/* Fin-Collections */
+
+/* ..Formulaire.. */
+.contact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+input,
+select,
+input,
+textarea{
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #5080C0;
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px 2px #0003;
+  
+}
+/* ..Fin-Formulaire */
+
+.reseaux{
+  background: #fff;
+  border-radius: 7px;
+  display: flex;
+}
+.reseaux img{
+  width: 20px;
+  height: auto;
+}
+.reseaux button{
+  background: transparent;
+}
+section button a{
+  text-decoration: none;
+  color: #0580C0;
+}
+.acceuil button a{
+  color: #fff;
+}
+/* ..Footer-Nav.. */
+
+
+footer .footer-nav a, footer p, footer a{
+  text-decoration: none;
+  color: #fff;
+}
+footer {
+  background: #5080C0;
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+  box-shadow: 2px 2px 2px 2px #0003;
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+}
+ .acceuil .text {
+   height: 96%;
+ }
+.navbar .menu{
+  display: none;
+}
+/* ..Fin-footer */
+
+@media(max-width: 450px) {
+  .navbar .menu{
+  display: block;
+}
+.navbar ul, .navbar .bts{
+  display: none;
+}
+  .navbar{
+    justify-content: space-between;
+  }
+  .acceuil .text{
+    height: 96%;
+  }
+  .navbar.active ul{
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+  }
+  .navbar.active ul li{
     margin-top: 20px;
-}
-.carte p{
-    font-size: 20px;
-    margin: 10px auto;
-    max-weight: 330px;
-}
-.reseau img{
-    width: 40px;
-    height: 40px;
-    padding: 10px 5px;
-    transition: background 0.5s;
-}
-.reseau img:hover{
-    background-color: #9a3fff;
-}
-.button{
+    
+  }
+  .navbar.active .bts{
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+  }
+  .navbar.active .bts .btn{
+    margin-top: 20px;
+    z-index: 10;
+  }
+  .navbar.active{
+    background: #5080C0;
+    height: 50vh;
+    width: 100%;
+    transition: 2s ease;
+    
+  }
+  .navbar.active .logo h3, .navbar.active .logo span, .navbar.active .menu h3, .navbar.active li a, .navbar.active button.btn a{
+    color: #fff;
     text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    font-weight: 700;
-    margin: 30px 0 10px;
-    background-color: white;
-    color: #9a3fff;
-    border-radius: 30px;
-    padding: 10px 30px;  
+  }
 }
